@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Hellocontroller extends Controller
+class HelloController extends Controller
 {
-    //
+    public function index()
+    {
+        $data = [
+            'msg' => 'これはコントローラから渡されたメッセージです',
+        ];
+
+        return view('Hello.index', $data);
+    }
 }
