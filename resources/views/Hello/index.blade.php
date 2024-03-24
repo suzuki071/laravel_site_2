@@ -7,5 +7,6 @@
 </head>
 <body>
   <h1>{{ $msg }}</h1>
+  <p>{{ $view_message }}</p>
 </body>
 </html>
