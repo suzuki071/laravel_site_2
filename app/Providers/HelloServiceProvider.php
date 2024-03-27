@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class HelloServiceProvider extends ServiceProvider
@@ -17,7 +18,7 @@ class HelloServiceProvider extends ServiceProvider
     /**
      * Bootstrap services.
      */
-    public function boot(): void
+    public function boot()
     {
         View::composer('Hello.index', 'App\Http\Composers\HelloComposer');
     }
